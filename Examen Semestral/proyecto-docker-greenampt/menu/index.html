@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universidad de Panamá · Centro Regional Universitario de Colón</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    min-height:100vh;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(63,185,80,0.18), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(88,166,255,0.18), transparent 40%),
+      #0d1117;
+    color:#e6edf3;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:48px 20px;
+  }
+  .caratula {
+    text-align:center;
+    max-width:760px;
+    margin-bottom:48px;
+  }
+  .badge {
+    display:inline-block;
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:#8b949e;
+    border:1px solid #30363d;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  h1 {
+    font-size:30px;
+    font-weight:700;
+    background:linear-gradient(135deg,#58a6ff,#3fb950);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    margin-bottom:8px;
+  }
+  h2 { font-size:16px; font-weight:500; color:#8b949e; margin-bottom:6px; }
+  p.materia { font-size:14px; color:#8b949e; }
+  .lock {
+    display:flex; align-items:center; gap:6px; justify-content:center;
+    margin-top:16px; font-size:12px; color:#3fb950;
+  }
+  .grid {
+    width:100%;
+    max-width:960px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:24px;
+  }
+  .card {
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:14px;
+    padding:28px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    transition:.2s ease;
+    position:relative;
+    overflow:hidden;
+  }
+  .card.activo { border-color:#3fb950; }
+  .card.activo:hover { transform:translateY(-4px); box-shadow:0 12px 24px rgba(63,185,80,.15); }
+  .card.bloqueado { opacity:.55; }
+  .icono { font-size:30px; }
+  .card h3 { font-size:18px; }
+  .card p { font-size:13px; color:#8b949e; line-height:1.5; }
+  .estado {
+    align-self:flex-start;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border-radius:999px;
+  }
+  .estado.disponible { background:rgba(63,185,80,.15); color:#3fb950; }
+  .estado.proximo { background:rgba(139,148,158,.15); color:#8b949e; }
+  .btn {
+    margin-top:auto;
+    text-align:center;
+    text-decoration:none;
+    padding:10px 0;
+    border-radius:8px;
+    font-weight:700;
+    font-size:14px;
+    background:linear-gradient(135deg,#238636,#2ea043);
+    color:#fff;
+  }
+  .btn.deshabilitado {
+    background:#21262d;
+    color:#8b949e;
+    pointer-events:none;
+  }
+  footer {
+    margin-top:56px;
+    font-size:12px;
+    color:#484f58;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+  <div class="caratula">
+    <span class="badge">Centro Regional Universitario de Colón</span>
+    <h1>Universidad de Panamá</h1>
+    <h2>Portafolio de Proyectos Académicos</h2>
+    <p class="materia">David Flores · Facultad de Informática</p>
+    <div class="lock">🔒 Conexión segura · Certificado SSL (Let's Encrypt)</div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card activo">
+      <div class="icono">🌱</div>
+      <span class="estado disponible">Disponible</span>
+      <h3>Green-Ampt Pro</h3>
+      <p>Calculadora de infiltración de suelos mediante Bisección y Falsa Posición.</p>
+      <a class="btn" href="https://greenampt.examen507.site" target="_blank">Entrar al proyecto →</a>
+    </div>
+
+    <div class="card bloqueado">
+      <div class="icono">🌊</div>
+      <span class="estado proximo">Próximamente</span>
+      <h3>Milne Predictor-Corrector</h3>
+      <p>Ecuaciones Diferenciales Difusas — Métodos Numéricos.</p>
+      <a class="btn deshabilitado" href="#">No disponible</a>
+    </div>
+
+    <div class="card bloqueado">
+      <div class="icono">📐</div>
+      <span class="estado proximo">Próximamente</span>
+      <h3>Eliminación Gaussiana</h3>
+      <p>Álgebra Lineal Numérica — sistemas de ecuaciones lineales.</p>
+      <a class="btn deshabilitado" href="#">No disponible</a>
+    </div>
+
+    <div class="card bloqueado">
+      <div class="icono">⚽</div>
+      <span class="estado proximo">Próximamente</span>
+      <h3>Experto en Futbolistas</h3>
+      <p>Sistema experto en Prolog — Programación IV.</p>
+      <a class="btn deshabilitado" href="#">No disponible</a>
+    </div>
+
+  </div>
+
+  <footer>© 2026 Universidad de Panamá · CRU Colón — Todos los derechos reservados</footer>
+
+</body>
+</html>

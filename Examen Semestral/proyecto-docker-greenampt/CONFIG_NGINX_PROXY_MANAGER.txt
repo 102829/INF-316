@@ -1,0 +1,12 @@
+### PROXY HOST 1: examen507.site (y www) ###
+Forward Hostname/IP: menu
+Forward Port: 80
+SSL: Request new certificate, Force SSL, HTTP/2
+
+### PROXY HOST 2: greenampt.examen507.site ###
+Forward Hostname/IP: green_ampt
+Forward Port: 3000
+SSL: Request new certificate, Force SSL, HTTP/2
+
+(Ya no se necesita configuracion avanzada: en produccion Reflex sirve
+frontend y backend por el mismo puerto 3000, un Proxy Host normal alcanza.)

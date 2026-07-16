@@ -1,0 +1,44 @@
+version: "3.8"
+
+networks:
+  proxy:
+    external: true
+
+services:
+
+  # ── Nginx Proxy Manager (gestiona dominios + SSL Let's Encrypt) ──
+  npm:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: npm
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "81:81"     # Panel de administración
+      - "443:443"
+    volumes:
+      - ./npm/data:/data
+      - ./npm/letsencrypt:/etc/letsencrypt
+    networks:
+      - proxy
+
+  # ── Carátula / Menú principal (examen507.site) ──
+  menu:
+    build: ./menu
+    container_name: menu
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - proxy
+
+  # ── Proyecto Green-Ampt (greenampt.examen507.site) ──
+  green_ampt:
+    build: ./green_ampt
+    container_name: green_ampt
+    restart: unless-stopped
+    environment:
+      - API_URL=https://greenampt.examen507.site
+    expose:
+      - "3000"
+    networks:
+      - proxy

@@ -1,0 +1,28 @@
+version: "3.8"
+
+networks:
+  proxy:
+    external: true
+  gaussiana_internal:
+    internal: true
+
+services:
+
+  gauss_backend:
+    build: ./backend
+    container_name: gauss_backend
+    restart: unless-stopped
+    networks:
+      - gaussiana_internal
+
+  gauss_frontend:
+    build: ./frontend
+    container_name: gauss_frontend
+    restart: unless-stopped
+    depends_on:
+      - gauss_backend
+    expose:
+      - "8003"
+    networks:
+      - proxy
+      - gaussiana_internal

@@ -1,0 +1,32 @@
+version: "3.8"
+
+networks:
+  proxy:
+    external: true
+  milne_internal:
+    internal: true
+
+services:
+
+  milne_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: milne_backend
+    restart: unless-stopped
+    networks:
+      - milne_internal
+
+  milne_frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: milne_frontend
+    restart: unless-stopped
+    depends_on:
+      - milne_backend
+    expose:
+      - "8003"
+    networks:
+      - proxy
+      - milne_internal
