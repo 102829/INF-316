@@ -1,0 +1,70 @@
+{
+  "david": {
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "historial": [
+      {
+        "metodo": "falsa_posicion",
+        "resultado": "0.665768",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "1",
+        "iteraciones": 45
+      },
+      {
+        "metodo": "falsa_posicion",
+        "resultado": "7.072759",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "60",
+        "iteraciones": 11
+      },
+      {
+        "metodo": "biseccion",
+        "resultado": "7.072735",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "60",
+        "iteraciones": 20
+      },
+      {
+        "metodo": "falsa_posicion",
+        "resultado": "7.072759",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "60",
+        "iteraciones": 11
+      },
+      {
+        "metodo": "biseccion",
+        "resultado": "7.072735",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "60",
+        "iteraciones": 20
+      },
+      {
+        "metodo": "falsa_posicion",
+        "resultado": "7.072759",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "60",
+        "iteraciones": 11
+      },
+      {
+        "metodo": "biseccion",
+        "resultado": "7.072735",
+        "ks": "0.05",
+        "hf": "12.5",
+        "delta_theta": "0.32",
+        "t": "60",
+        "iteraciones": 20
+      }
+    ]
+  }
+}

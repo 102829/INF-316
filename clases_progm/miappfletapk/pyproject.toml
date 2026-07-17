@@ -1,0 +1,14 @@
+[tool.flet]
+name = "Green-Ampt Pro"
+description = "Sistema de Infiltración"
+version = "2.0.0"
+build_number = 2
+main = "green_ampt_flet_APK_FIXED.py"
+
+requirements = [
+    "flet==0.21.0",
+    "httpx==0.25.2"
+]
+
+[tool.flet.android]
+package_name = "com.greenampt.pro"

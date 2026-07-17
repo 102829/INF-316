@@ -1,0 +1,10 @@
+services:
+
+  backend:
+    build: .
+    container_name: crout-cholesky-api
+
+    ports:
+      - "8000:8000"
+
+    restart: unless-stopped

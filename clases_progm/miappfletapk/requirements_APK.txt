@@ -1,0 +1,12 @@
+# Green-Ampt Pro v2.0 - Dependencias para APK
+# IMPORTANTE: Solo el frontend va en la APK
+# El backend (main.py) corre en tu PC
+
+# Frontend GUI (necesario para APK)
+flet==0.21.0
+
+# Cliente HTTP (para conectar al servidor)
+httpx==0.25.2
+
+# NOTA: fastapi y uvicorn NO van en la APK
+# Esas librerías caben en el servidor (main.py en tu PC)
